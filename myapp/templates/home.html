@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+</head>
+<body class="bg-light">
+
+    <div class="container">
+        <h1>Welcome to our Vus!</h1>
+        <div>
+            <form action="{% url 'signup' %}" method="get">
+                <button type="submit" class="btn btn-success btn-signup">Sign Up Here</button>
+            </form>
+        </div>
+        <div>
+            <a href="{% url 'login' %}">Already have an account?</a>
+        </div>
+    </div>
+
+    <!-- Other content of your home page -->
+</body>
+</html>
